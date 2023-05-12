@@ -294,6 +294,19 @@ iframe{
 #more {
   display: none;
 }
+#more1 {
+  display: none;
+}
+#more2 {
+  display: none;
+}
+#more3 {
+  display: none;
+}
+#more4 {
+  display: none;
+}
+
 .navbar-brand {
 text-align: center;
 }
@@ -304,7 +317,6 @@ h6{
   text-align: center;
 }
 
-.carousel-image{
-  height: 100px;
-  width: 100px;
+.callus{
+  text-align: center;
 }
