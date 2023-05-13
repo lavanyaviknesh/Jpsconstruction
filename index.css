@@ -307,7 +307,9 @@ iframe{
   display: none;
 }
 
-
+.navbar-brand {
+text-align: center;
+}
 h6{
   font-style: italic;
 }
