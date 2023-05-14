@@ -32,6 +32,18 @@
 
     <!-- Template Stylesheet -->
     <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YOA4p4ZX5CMJUNYpF");
+      })();
+    </script>
+
 </head>
 
 <body>
@@ -43,7 +55,7 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
-                        <span>4/338,Clri Nagar,1st street,Neelankarai,Chennai-600115</span>
+                        <span>4/338, Clri Nagar, 1st street, Neelankarai, Chennai-600115</span>
                     </div>
                 </div>
             </div>
@@ -74,8 +86,8 @@
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-10 text-uppercase text-white"><i class=" bi bi-building text-primary me-0"></i> <span>     Jps              </span> construction                     </h1>
+            <a href="index" class="navbar-brand">
+                <h1 class="m-0 display-10 text-uppercase text-white"><i class=" bi bi-building text-primary me-sm-auto"></i> <span> Jps </span> construction </h1>
                 <h6 class="text-uppercase text-primary me-ng-2">We Build Your Dream Home </h6>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -83,7 +95,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="index" class="nav-item nav-link">Home</a>
                     <a href="#about" class="nav-item nav-link">About </a>
                     <a href="#service" class="nav-item nav-link">Services</a>
                     <div class="nav-item dropdown">
@@ -97,7 +109,8 @@
                         </div>
                     </div>
                     <a href="#contact" class="nav-item nav-link">Contact </a>
-                    <a href="#get_quote" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>
+                    <!--<a href="#get_quote" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>-->
+                    <a href="#get_quote" class="nav-item nav-link active">Get A Quote <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </nav>
@@ -288,7 +301,7 @@
 
 
     <!-- Appointment Start -->
-    <div class="container-fluid py-6 px-5" id="get_quote">
+   <div class="container-fluid py-6 px-5" id="get_quote">
         <div class="row gx-5">
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="mb-4">
@@ -301,15 +314,22 @@
             </div>
             <div class="col-lg-8">
                 <div class="bg-light text-center p-5">
-                    <form>
+                    <form name="submit_form" id="submit_form" onsubmit="return validateForm()" method="post" method="post" enctype="multipart/form-data">
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                <input type="text" name="name" class="form-control border-1" id="name" placeholder="Your Name*" style="height: 55px;" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                <input type="text" name="yourlocation" class="form-control border-1" id="yourlocation" placeholder="Your location*" style="height: 55px;" required>
                             </div>
                             <div class="col-12 col-sm-6">
+                                <input type="tel" name="mobile" class="form-control border-1" id="mobile" placeholder="Mobile Number*" style="height: 55px;" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" pattern="[246789][0-9]{9}" maxlength=10 required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" name="email" class="form-control border-1" id="email" placeholder="Email Address*" style="height: 55px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                            </div>
+                            
+                            <!--<div class="col-12 col-sm-6">
                                 <div class="date" id="date" data-target-input="nearest">
                                     <input type="text"
                                         class="form-control border-0 datetimepicker-input"
@@ -322,12 +342,12 @@
                                         class="form-control border-0 datetimepicker-input"
                                         placeholder="Call Back Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
                                 </div>
+                            </div>-->
+                            <div class="col-12">
+                                <textarea class="form-control border-1" name="message" id="message" rows="5" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0" rows="5" placeholder="Message"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Request</button>
+                                <button class="btn btn-primary w-100 py-3" id="submit" type="submit" onclick="sendMail()" disabled>Submit Request</button>
                             </div>
                         </div>
                     </form>
@@ -335,7 +355,39 @@
             </div>
         </div>
     </div>
+   <!--- <div class = "container">
+        <form onsubmit="sendEmail(); reset(); return false;" >
+        <h3>Get In Touch </h3>
+        <input type="text" id="name" placeholder="Yor Name" required>
+        <input type="email" id="email" placeholder="Email id" required>
+        <input type="text" id="phone" placeholder="Phone no." required>
+        <textarea id ="message" rows="4" id="Name" placeholder="How Can We Help You"></textarea>
+        <button type="submit">Send</button>
+        
+ </form>
+    </div>
+    
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+
+            function sendEmail(){
+                Email.send({
+                 secureToken:"c90aa574-7f4b-4f50-96a0-d17eba253db5" ,
+                 To : 'lavanyavelu1@gmail.com',
+                 From :document.getElementById(email).value,
+                 Subject : "New Contact Form For Enquiry",
+                 Body : "Name: "+document.getElementById ("name").value
+                 +"<br> Email: "+ document.getElementById("email").value
+                 +"<br> Phone no: "+ document.getElementById("phone").value
+                 +"<br> Message: "+ document.getElementById("message").value
+            }).then(
+               message => alert(Message Sent Successfully)
+                   );
+
+             }
+        </script>--->
     <!-- Appointment End -->
+                        
 
 
     <!-- Portfolio Start -->
@@ -564,12 +616,12 @@
  <div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5" id="contact">
     <div class="row g-5">
         <div class="col-lg-6 pe-lg-5">
-            <a href="index.html" class="navbar-brand">
+            <a href="index" class="navbar-brand">
                 <h1 class="m-0 display-10 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i><span> Jps </span>construction</h1>
                 <h6 class="text-uppercase text-primary me-2">We Build Your Dream Home </h6>
             </a>
                 </a>
-            <p><i class="fa fa-map-marker-alt me-2"></i>4/338,Clri Nagar,1st street,Neelankarai,Chennai-600115</p>
+            <p><i class="fa fa-map-marker-alt me-2"></i>4/338, Clri Nagar, 1st street, Neelankarai, Chennai-600115</p>
             <p><i class="fa fa-phone-alt me-2"></i>9444188917, 8838254157</p>
             <p><i class="fa fa-envelope me-2"></i>Jjpsconstruction@gmail.com</p>
             <div class="d-flex justify-content-start mt-4">
@@ -583,10 +635,10 @@
         </div>
         <div class="col-lg-6 ps-lg-5">
             <div class="row g-5">
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                     <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white-50 mb-2" href="index"><i class="fa fa-angle-right me-2"></i>Home</a>
                         <a class="text-white-50 mb-2" href="#about"><i class="fa fa-angle-right me-2"></i>About Us</a>
                         <a class="text-white-50 mb-2" href="#service"><i class="fa fa-angle-right me-2"></i>Our Services</a>
                         <a class="text-white-50 mb-2" href="#project"><i class="fa fa-angle-right me-2"></i>Our Projects</a>
@@ -594,20 +646,28 @@
                         <a class="text-white-50 mb-2" href="#get_quote"><i class="fa fa-angle-right me-2"></i>Get Quote</a>
                     </div>
                 </div>
-            <div class="col-sm-6">
+           <!-- <div class="col-sm-6">
                 <div class="container" id="location">
                     <h4 class="text-white text-uppercase mb-4">Location</h4>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15553.553437775245!2d80.252725!3d12.946983!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d04df64af4b%3A0xcb6591fbdb0c2f62!2sStar%20Kingz!5e0!3m2!1sen!2sin!4v1683840086978!5m2!1sen!2sin" width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+            </div>-->
+            <div class="col-sm-7">
+            <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
+            <div class="w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control border-light" style="padding: 10px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
+                </div>
             </div>
-                <div class="col-sm-12">
+            </div>
+                <!--<div class="col-sm-12">
                     <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
                     <div class="w-100">
                         <div class="input-group">
                             <input type="text" class="form-control border-light" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -718,10 +778,82 @@
           moreText4.style.display = "inline";
         }        
       }
+/*Disable submit button until filling all the required fields*/
+    $('#submit_form input[required]').on('input propertychange paste change', function() {
+        var empty = $('#submit_form').find('input[required]').filter(function() {
+        return this.value == '';
+    });
+    $('#submit').prop('disabled', (empty.length))
+    })
+/*validate
+function validateForm() {
+  let name = document.forms["submit_form"]["name"].value;
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let location = document.forms["submit_form"]["yourlocation"].value;
+  if (yourlocation == "") {
+    alert("Location must be filled out");
+    return false;
+  }
+  let mobile = document.forms["submit_form"]["mobile"].value;
+  if (mobile == "") {
+    alert("Mobile Number must be filled out");
+    return false;
+  }  let email = document.forms["submit_form"]["email"].value;
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  let message = document.forms["submit_form"]["message"].value;
+  if (message == "") {
+    alert("Message must be filled out");
+    return false;
+  }
+}
+*/
+function sendMail(){
+
+var name = document.getElementById('name').value;
+if(!name){
+    document.getElementById("error").innerHTML = "Enter Your Name";
+    return false;    // in failure case
+}        
+return true;  // in success case
+
+var location = document.getElementById('yourlocation').value;
+if(!location){
+    document.getElementById("error").innerHTML = "Enter your location";
+    return false;    // in failure case
+}        
+return true;  // in success case
+
+var email = document.getElementById('email').value;
+if(!email){
+    document.getElementById("error").innerHTML = "Enter your Email Id";
+    return false;    // in failure case
+}        
+return true;  // in success case
+
+var mobile = document.getElementById('mobile').value;
+if(!mobile){
+    document.getElementById("error").innerHTML = "Enter Mobile Number";
+    return false;    // in failure case
+}        
+return true;  // in success case
+
+var message = document.getElementById('message').value;
+if(!message){
+    document.getElementById("error").innerHTML = "Enter Message";
+    return false;    // in failure case
+}        
+return true;  // in success case
+
+}
+
       </script>
-
-
-</div>
+     
 </body>
 
 </html>
