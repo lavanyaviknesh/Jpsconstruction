@@ -103,7 +103,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  position: relative;
+  position: right;
   padding: 35px 15px;
   font-size: 18px;
   text-transform: uppercase;
