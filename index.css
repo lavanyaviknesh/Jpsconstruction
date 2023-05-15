@@ -301,8 +301,9 @@ iframe{
 .navbar-brand {
 text-align: center;
 }
-h6{
+h5{
   font-style: italic;
+  font-size: small;
 }
 .links{
   text-align: center;
@@ -353,4 +354,7 @@ form button{
     filter: invert;
   }
   }
-  
+  h3{
+    position: left
+    
+  }
