@@ -185,7 +185,7 @@
                        
     </div>
     <div class="p-4">
-        <h4 class="text-uppercase">Dakshinamoorthy</h4>
+        <h4 class="text-uppercase"></h4>
         <h4 class="text-uppercase" style="text-align: center;">Mr.J.Dakshinamoorthy</h4>
         <div style="text-align: center;">
             <span style="font-weight: bold;color: black;">Founder</span>
@@ -279,8 +279,8 @@
                     </div>
             <div class="px-4 pb-4">
                 <h4 class="text-uppercase mb-3">Consultation</h4>
-                <p> We are doing consultations according to client queries<span id="dots3">...</span><span id="more3">about construction works for every queries we have answers regarding client needs we will give best opinion and suggestions if clients like our approach we will continue further. For further details Contact Us  </span></p>
-                <button class="btn text-primary" onclick="myFunction3()" id="myBtn3">Read More <i class="bi bi-arrow-right"></i></button>
+                <p> We are doing consultations according to client queries<span id="dots5">...</span><span id="more5">about construction works for every queries we have answers regarding client needs we will give best opinion and suggestions if clients like our approach we will continue further. For further details Contact Us  </span></p>
+                <button class="btn text-primary" onclick="myFunction5()" id="myBtn5">Read More <i class="bi bi-arrow-right"></i></button>
             </div>
         </div>
     </div>
@@ -743,6 +743,21 @@
           moreText4.style.display = "inline";
         }        
       }
+      function myFunction5() {
+        var dots5 = document.getElementById("dots5");
+        var moreText5 = document.getElementById("more5");
+        var btnText5 = document.getElementById("myBtn5");
+        if (dots5.style.display === "none") {
+          dots5.style.display = "inline";
+          btnText5.innerHTML = "Read more";
+          moreText5.style.display = "none";
+        } else {
+          dots5.style.display = "none";
+          btnText5.innerHTML = "Read less";
+          moreText5.style.display = "inline";
+        }        
+      }
+
 
     $('#submit_form input[required]').on('input propertychange paste change', function() {
         var empty = $('#submit_form').find('input[required]').filter(function() {
