@@ -52,6 +52,7 @@
         <div class="row gx-5">
             <div class="col-lg-4 text-center py-3">
                 <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-map-marker-alt me-2"></i></a>
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
@@ -95,7 +96,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index" class="nav-item nav-link">Home</a>
+                    <a href="index" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About </a>
                     <a href="#service" class="nav-item nav-link">Services</a>
                     <div class="nav-item dropdown">
@@ -103,14 +104,14 @@
                         <div class="dropdown-menu m-0">
                             <a href="#ChooseUs" class="dropdown-item">Why You Choose Us</a>
                             <a href="#project" class="dropdown-item"> Our Projects</a>
-                            <a href="#location" class="dropdown-item"> Our Location</a>
+                            <a href="https://goo.gl/maps/gLhsAgfRV7gwWaDG8" class="dropdown-item"> Our Location</a>
                             
                             
                         </div>
                     </div>
-                    <a href="#contact" class="nav-item nav-link">Contact </a>
+                    <a href="#contact" class="nav-item nav-link ">Contact </a>
                     <!--<a href="#get_quote" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>-->
-                    <a href="#get_quote" class="nav-item nav-link active">Get A Quote <i class="bi bi-arrow-right"></i></a>
+                <a href="#get_quote" class="nav-item nav-link active bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </nav>
@@ -178,7 +179,7 @@
             <p class="mb-4">If you are looking for a reliable and experienced construction builder in Tamilnadu, look no further Contact us today to discuss your project requirements and we will be more than happy to assist you to get your dream home.</p>
                    </div>
                    <div class="col-lg-5 pb-5" style="min-height: 400px;">
-                    <div class="position-relative bg-dark h-100 ms-5">
+                    <div class="position-relative bg-dark-radial h-100 ms-5">
   
     
                         <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="img/about.jpg" style="object-fit: cover;">
@@ -199,7 +200,7 @@
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
+                    <img class="img-fluid" src="img/project8a.jpg" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-building text-primary"></i>
                     </div>
@@ -212,7 +213,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-2.jpg" alt="">
+                    <img class="img-fluid" src="img/project1a.png" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-home text-primary"></i>
                     </div>
@@ -225,7 +226,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-3.jpg" alt="">
+                    <img class="img-fluid" src="img/architecta.jpg" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-drafting-compass text-primary"></i>
                     </div>
@@ -237,7 +238,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/interior.jpg" alt="">
+                    <img class="img-fluid" src="img/interior6a.jpg" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-palette text-primary"></i>
                     </div>
@@ -251,9 +252,9 @@
                 
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                   <!-- <img class="img-fluid" src="img/project4.jpg" alt="">-->
+                   <img class="img-fluid" src="img/project4.jpg" alt="">
                     <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-tools text-primary"></i>
+                        <i class="fa fa-3x fa-building text-primary"></i>
                     </div>
                     <div class="px-4 pb-4">
                         <h4 class="text-uppercase mb-3">Exterior Design</h4>
@@ -314,21 +315,34 @@
             </div>
             <div class="col-lg-8">
                 <div class="bg-light text-center p-5">
-                    <form name="submit_form" id="submit_form" onsubmit="return validateForm()" method="post" method="post" enctype="multipart/form-data">
+                    <form name="submit_form" id="submit_form" method="post" enctype="multipart/form-data">
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" name="name" class="form-control border-1" id="name" placeholder="Your Name*" style="height: 55px;" required>
+                                <input type="text" class="form-control border-1" id="name" placeholder="Your Name*" style="height: 55px;" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" name="yourlocation" class="form-control border-1" id="yourlocation" placeholder="Your location*" style="height: 55px;" required>
+                                <input type="text" class="form-control border-1" id="yourlocation" placeholder="Your location*" style="height: 55px;" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="tel" name="mobile" class="form-control border-1" id="mobile" placeholder="Mobile Number*" style="height: 55px;" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" pattern="[246789][0-9]{9}" maxlength=10 required>
+                                <input type="tel" class="form-control border-1" id="mobile" placeholder="Mobile Number*" style="height: 55px;" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" pattern="[7-9]{1}[0-9]{9}" maxlength=10 required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" name="email" class="form-control border-1" id="email" placeholder="Email Address*" style="height: 55px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                                <input type="email" class="form-control border-1" id="email" placeholder="Email Address*" style="height: 55px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                             </div>
                             
+                            <div class="col-12">
+                                <input class="form-control border-1" id="message" rows="5" placeholder="Message*" required>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" id="submit" type="submit" onclick="sendMail()" disabled>Submit Request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
                             <!--<div class="col-12 col-sm-6">
                                 <div class="date" id="date" data-target-input="nearest">
                                     <input type="text"
@@ -343,18 +357,7 @@
                                         placeholder="Call Back Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
                                 </div>
                             </div>-->
-                            <div class="col-12">
-                                <textarea class="form-control border-1" name="message" id="message" rows="5" placeholder="Message"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" id="submit" type="submit" onclick="sendMail()" disabled>Submit Request</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                            
    <!--- <div class = "container">
         <form onsubmit="sendEmail(); reset(); return false;" >
         <h3>Get In Touch </h3>
@@ -422,7 +425,7 @@
             </div>
         </div>
         <div class="row g-5 portfolio-container">
-            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
                 <div class="position-relative portfolio-box">
                     <img class="img-fluid w-100" src="img/project3.jpg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
@@ -434,7 +437,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
                 <div class="position-relative portfolio-box">
                     <img class="img-fluid w-100" src="img/project4.jpg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
@@ -458,7 +461,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
                 <div class="position-relative portfolio-box">
                     <img class="img-fluid w-100" src="img/project6.jpg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
@@ -470,7 +473,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
                 <div class="position-relative portfolio-box">
                     <img class="img-fluid w-100" src="img/Renovation.jpg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
@@ -529,7 +532,7 @@
         </div>
     </div>
     <div class="row g-5 portfolio-container">
-        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
             <div class="position-relative portfolio-box">
                 <img class="img-fluid w-100" src="img/project2a.jpg" alt="">
                 <a class="portfolio-title shadow-sm" href="">
@@ -541,7 +544,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
             <div class="position-relative portfolio-box">
                 <img class="img-fluid w-100" src="img/interior1.jpg" alt="">
                 <a class="portfolio-title shadow-sm" href="">
@@ -565,7 +568,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
             <div class="position-relative portfolio-box">
                 <img class="img-fluid w-100" src="img/interior4.jpg" alt="">
                 <a class="portfolio-title shadow-sm" href="">
@@ -589,7 +592,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+        <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
             <div class="position-relative portfolio-box">
                 <img class="img-fluid w-80" src="img/interior2.jpg" alt="">
                 <a class="portfolio-title shadow-sm" href="">
@@ -629,7 +632,7 @@
                 <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="https://www.facebook.com/jdakshinamoorthy.dakshinamoorthy.5"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#location"><i class="fa fa-map-marker-alt me-2"></i></a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="https://goo.gl/maps/gLhsAgfRV7gwWaDG8"><i class="fa fa-map-marker-alt me-2"></i></a>
   
             </div>
         </div>
@@ -778,80 +781,13 @@
           moreText4.style.display = "inline";
         }        
       }
-/*Disable submit button until filling all the required fields*/
+
     $('#submit_form input[required]').on('input propertychange paste change', function() {
         var empty = $('#submit_form').find('input[required]').filter(function() {
         return this.value == '';
     });
     $('#submit').prop('disabled', (empty.length))
     })
-/*validate
-function validateForm() {
-  let name = document.forms["submit_form"]["name"].value;
-  if (name == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-  let location = document.forms["submit_form"]["yourlocation"].value;
-  if (yourlocation == "") {
-    alert("Location must be filled out");
-    return false;
-  }
-  let mobile = document.forms["submit_form"]["mobile"].value;
-  if (mobile == "") {
-    alert("Mobile Number must be filled out");
-    return false;
-  }  let email = document.forms["submit_form"]["email"].value;
-  if (email == "") {
-    alert("Email must be filled out");
-    return false;
-  }
-  let message = document.forms["submit_form"]["message"].value;
-  if (message == "") {
-    alert("Message must be filled out");
-    return false;
-  }
-}
-*/
-function sendMail(){
-
-var name = document.getElementById('name').value;
-if(!name){
-    document.getElementById("error").innerHTML = "Enter Your Name";
-    return false;    // in failure case
-}        
-return true;  // in success case
-
-var location = document.getElementById('yourlocation').value;
-if(!location){
-    document.getElementById("error").innerHTML = "Enter your location";
-    return false;    // in failure case
-}        
-return true;  // in success case
-
-var email = document.getElementById('email').value;
-if(!email){
-    document.getElementById("error").innerHTML = "Enter your Email Id";
-    return false;    // in failure case
-}        
-return true;  // in success case
-
-var mobile = document.getElementById('mobile').value;
-if(!mobile){
-    document.getElementById("error").innerHTML = "Enter Mobile Number";
-    return false;    // in failure case
-}        
-return true;  // in success case
-
-var message = document.getElementById('message').value;
-if(!message){
-    document.getElementById("error").innerHTML = "Enter Message";
-    return false;    // in failure case
-}        
-return true;  // in success case
-
-}
-
       </script>
      
 </body>
