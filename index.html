@@ -318,20 +318,20 @@
                     <form name="submit_form" id="submit_form" method="post" enctype="multipart/form-data">
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-1" id="name" placeholder="Your Name*" style="height: 55px; width:250px;" required>
+                                <input type="text" class="form-control border-90" id="name" placeholder="Your Name*" style="height: 55px; width:250px;" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-1" id="yourlocation" placeholder="Your location*" style="height: 55px;width:250px;" required>
+                                <input type="text" class="form-control border-90" id="yourlocation" placeholder="Your location*" style="height: 55px;width:250px;" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="tel" class="form-control border-1" id="mobile" placeholder="Mobile Number*" style="height: 55px;width:250px;" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" pattern="[7-9]{1}[0-9]{9}" maxlength=10 required>
+                                <input type="tel" class="form-control border-90" id="mobile" placeholder="Mobile Number*" style="height: 55px;width:250px;" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" pattern="[7-9]{1}[0-9]{9}" maxlength=10 required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-1" id="email" placeholder="Email Address*" style="height: 55px;width:250px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                                <input type="email" class="form-control border-90" id="email" placeholder="Email Address*" style="height: 55px;width:250px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                             </div>
                             
                             <div class="col-12">
-                                <input class="form-control border-1" id="message" style="padding: 10px 40px 120px 10px;"style="height: 55px;width:250px;" placeholder="Message*" required>
+                                <input class="form-control border-90" id="message" style="padding: 10px 40px 120px 10px;"style="height: 55px;width:250px;" placeholder="Message*" required>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" id="submit" type="submit" onclick="sendMail()" disabled>Submit Request</button>
