@@ -348,13 +348,44 @@ form button{
   border-radius: 30px;
 
 }
-@media screen and (max-width:767px) {
-  iframe{
-    width: 350px ;
-    height: 250px ;
-    filter: invert;
+@media only screen and (max-device-width: 480px) {
+  div#wrapper {
+      width: 400px;
   }
+
+  div#header {
+      background-image: url(media-queries-phone.jpg);
+      height: 93px;
+      position: relative;
   }
+
+  div#header h1 {
+      font-size: 140%;
+  }
+
+  #content {
+      float: none;
+      width: 100%;
+  }
+
+  #navigation {
+      float:none;
+      width: auto;
+  }
+} 
+body {
+  background-image: url(/img/small-bg.png);
+}
+
+#wrapper {
+  width: auto;
+  margin: auto;
+  text-align: left;
+  background-image: url(/img/small-logo.png);
+  background-position: left 5px;
+  background-repeat: no-repeat;
+  min-height: 400px;
+} 
   h3{
     position: left
     
