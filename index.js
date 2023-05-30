@@ -6,8 +6,8 @@ email: document.getElementById("email").value,
 mobile: document.getElementById("mobile").value,
 message: document.getElementById("message").value,
 };
-const serviceID = "lavanyavelu1@gmail.com";
-const templateID = "template_tsnxgje";
+const serviceID = "jjpsconstruction@gmail.com";
+const templateID = "template_0oyajwd";
 emailjs.send(serviceID, templateID, params)
 .then(res=>{
 document.getElementById("name").value ="" ;
