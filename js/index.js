@@ -8,7 +8,7 @@ message: document.getElementById("message").value,
 };
 const serviceID = "service_wacsyd4";
 const templateID = "template_0oyajwd";
-emailjs.send(serviceID, templateID, params)
+emailjs.send(service_wacsyd4, template_0oyajwd, params)
 .then(res=>{
 document.getElementById("name").value ="" ;
 document.getElementById("yourlocation").value ="";
@@ -19,7 +19,7 @@ console.log(res);
 alert("Your message sent successfully");
 })
 .catch ((err) => console.log(err));
-alert("Your message sent successfully");
+alert("Your message sent successfully"); 
 }
 
 				
