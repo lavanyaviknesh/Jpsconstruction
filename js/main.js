@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-
+    
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -26,8 +26,8 @@
     $('.time').datetimepicker({
         format: 'LT'
     });
-
-
+    
+    
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -37,7 +37,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -51,7 +51,7 @@
         $("#portfolio-flters li").removeClass('active');
         $(this).addClass('active');
 
-        portfolioIsotope.isotope({ filter: $(this).data('filter') });
+        portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
 
 
@@ -63,21 +63,6 @@
         dots: false,
         loop: true,
     });
-
+    
 })(jQuery);
 
-// Toggle navigation
-
-const navLink = document.getElementsByClassName('nav--list');
-const navCol = document.getElementById('navbarCollapse')
-const navBar = document.getElementById('navbar-toggler')
-
-for (const links of navLink) {
-    links.addEventListener('click', () => {
-        navCol.classList.toggle("toggleNavigation");
-    });
-}
-
-navBar.addEventListener('click', () => {
-    navCol.classList.toggle("toggleNavigation");
-})
