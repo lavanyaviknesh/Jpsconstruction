@@ -2,3 +2,7 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html 
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/users/create/?,*$
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^(.*)$ https://lavanyaviknesh.github.io/Jpsconstruction/[R=405,L]
