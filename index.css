@@ -295,7 +295,8 @@ iframe{
 #more1,
 #more2,
 #more3,
-#more4 {
+#more4, 
+#more5 {
   display: none;
 }
 .navbar-brand {
@@ -358,3 +359,4 @@ form button{
     position: left
     
   }
+  
