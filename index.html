@@ -341,6 +341,57 @@
 
 
     <!-- Appointment Start -->
+  <!--<form class="gform pure-form pure-form-stacked" method="POST" data-email="lavanyavelu1@gmail.com"
+    action="https://script.google.com/macros/s/AKfycbwMxYDrufp73bKdU8gMvxFDdHRuzcR4IKQUB33B7GqwyfyZS04/exec">-->
+      <!-- change the form action to your script url -->
+  
+      <!--<div class="form-elements">
+        <fieldset class="pure-group">
+          <label for="name">Name: </label>
+          <input id="name" name="name" placeholder="Type Your Name" />
+        </fieldset>
+  
+        <fieldset class="pure-group">
+          <label for="message">Message: </label>
+          <textarea id="message" name="message" rows="10"
+          placeholder="Tell us what's on your mind..."></textarea>
+        </fieldset>
+  
+        <fieldset class="pure-group">
+          <label for="email"><em>Your</em> Email Address:</label>
+          <input id="email" name="email" type="email" value=""
+          required placeholder="your.name@email.com"/>
+        </fieldset>
+  
+        <fieldset class="pure-group">
+          <label for="color">Favourite Color: </label>
+          <input id="color" name="color" placeholder="green" />
+        </fieldset>
+  
+        <fieldset class="pure-group honeypot-field">
+          <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+          <input id="honeypot" type="text" name="honeypot" value="" />
+        </fieldset>
+  
+        <button class="button-success pure-button button-xlarge">
+          <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+      </div>-->
+  
+      <!-- Customise the Thankyou Message People See when they submit the form: -->
+     <!--<div class="thankyou_message" style="display:none;">
+        <h2><em>Thanks</em> for contacting us!
+          We will get back to you soon!</h2>
+      </div>
+  
+    </form>-->
+  
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <!--<script data-cfasync="false" src="form-submission-handler.js"></script>-->
+  <!---  <form action="https://formspree.io/f/{form_id}" method="post">
+        <label for="email">Your Email</label>
+        <input name="Email" id="email" type="email">
+        <button type="submit">Submit</button>
+      </form>-->
     <div class="container-fluid py-6 px-5" id="get_quote">
         <div class="row gx-5">
             <div class="col-lg-4 mb-5 mb-lg-0">
@@ -368,6 +419,9 @@
             <div class="col-lg-8">
                 <div class="bg-light text-center p-2 p-md-5">
                     <form
+                    action="https://formspree.io/f/xbjnoyaz"
+                
+                  
                         name="submit_form"
                         id="submit_form"
                         method="post"
@@ -407,7 +461,12 @@
                                     required
                                 />
                             </div>
-                            <div class="col-12 col-sm-6">
+                            <label>
+                                Your email:
+                                <input type="email" name="email">
+                              </label>
+                            
+                           <!-- <div class="col-12 col-sm-6">
                                 <input
                                     type="email"
                                     class="form-control border-1"
@@ -417,9 +476,12 @@
                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                                     required
                                 />
-                            </div>
-
-                            <div class="col-12">
+                            </div>-->
+<label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+                           <!--- <div class="col-12">
                                 <input
                                     class="form-control border-1"
                                     id="message"
@@ -428,8 +490,8 @@
                                     placeholder="Message*"
                                     required
                                 />
-                            </div>
-                            <div class="col-12">
+                            </div>-->
+                            <!--<div class="col-12">
                                 <button
                                     class="btn btn-primary w-100 py-3"
                                     id="submit"
@@ -438,7 +500,8 @@
                                     disabled
                                 >
                                     Submit Request
-                                </button>
+                                </button>-->
+                                <button type="submit">Send</button>
                             </div>
                         </div>
                     </form>
@@ -446,6 +509,7 @@
             </div>
         </div>
     </div>
+
 
                              
     <!-- Appointment End -->
